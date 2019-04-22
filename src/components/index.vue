@@ -10,14 +10,9 @@
           <el-submenu index="1">
             <template slot="title"><i class="el-icon-setting"></i>导航一</template>
             <el-menu-item-group>
-              <router-link to="/home">
-                <el-menu-item index="1-1" :class="this.$route.path == '/home'?'is-active':''">hhhhhhh</el-menu-item>
+              <router-link v-for="(item, index) in routers" :key="item.name" v-if="item.path != '/'" :to="item.path">
+                <el-menu-item :index="'1-' + index" :class="$route.path == item.path?'is-active':''">{{item.name}}</el-menu-item>
               </router-link>
-
-              <router-link to="/echarts">
-                <el-menu-item index="1-2" :class="this.$route.path == '/echarts'?'is-active':''">echarts</el-menu-item>
-              </router-link>
-
             </el-menu-item-group>
           </el-submenu>
         </el-menu>
@@ -32,11 +27,16 @@
 </template>
 
 <script>
+  import routers from "../routes";
+
   export default {
     data() {
-      return{}
+      return{
+        routers: routers
+      }
     },
     mounted(){
+
     }
   };
 </script>
