@@ -2,7 +2,7 @@
 
 module.exports = {
     // 基本路径
-    publicPath: '/',
+    publicPath: '/127.0.0.1:3000',
     // 输出文件目录
     outputDir: 'dist',
     // webpack-dev-server 相关配置
