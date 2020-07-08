@@ -10,11 +10,14 @@ import routes from './routes'
 import axios from 'axios'
 Vue.prototype.$http = axios
 
+import echarts from 'echarts'
+Vue.prototype.$echarts = echarts
+
 Vue.use(ElementUI)
 Vue.use(VueRouter)
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   routes: routes
 })
 
