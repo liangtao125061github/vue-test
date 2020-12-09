@@ -20,7 +20,7 @@
 
 <script>
 // import myTable from './myTable'
-import myForm from "./myForm";
+import myForm from "./components/myForm";
   export default {
     name: "index",
     components: {

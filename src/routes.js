@@ -1,5 +1,5 @@
-import Home from './components/home'
-import Echarts from './components/echarts'
+import Home from './views/home'
+import Echarts from './views/echarts'
 
 const routers = [
   {
