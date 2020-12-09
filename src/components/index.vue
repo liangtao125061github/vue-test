@@ -10,9 +10,11 @@
           <el-submenu index="1">
             <template slot="title"><i class="el-icon-setting"></i>导航一</template>
             <el-menu-item-group>
-              <router-link v-for="(item, index) in routers" :key="item.name" v-if="item.path != '/'" :to="item.path">
-                <el-menu-item :index="'1-' + index" :class="$route.path == item.path?'is-active':''">{{item.name}}</el-menu-item>
-              </router-link>
+              <template v-for="(item, index) in routers">
+                <router-link :key="item.name" v-if="item.path != '/'" :to="item.path">
+                  <el-menu-item :index="'1-' + index" :class="$route.path == item.path?'is-active':''">{{item.name}}</el-menu-item>
+                </router-link>
+              </template>
             </el-menu-item-group>
           </el-submenu>
         </el-menu>
