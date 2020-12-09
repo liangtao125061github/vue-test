@@ -43,7 +43,7 @@ views
 ### 问题描述：
 
 ----
-`问题1：`其他人开发或修改之前写的组件的时候，也需要打印自己的console.log，但是由于前开发有大量的console.log没有删除
+`问题1：console.log()`其他人开发或修改之前写的组件的时候，也需要打印自己的console.log，但是由于前开发有大量的console.log没有删除
 导致在控制台找不到或者找很久才找到自己想要的console.log，再操作页面的时候，继续有console.log输出，把开发
 自己写的console.log顶上去，给调试造成困扰。
 
