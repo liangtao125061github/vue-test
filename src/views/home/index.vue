@@ -1,12 +1,12 @@
 <template>
   <div class="home">
     <el-button type="primary" @click="onSubmit">显示弹框</el-button>
-<!--    <myTable :key="tableKey"/>-->
+    <!--    <myTable :key="tableKey"/>-->
     <el-dialog
-      title="提示"
-      :visible.sync="dialogVisible"
-      width="30%"
-      :before-close="handleClose">
+        title="提示"
+        :visible.sync="dialogVisible"
+        width="30%"
+        :before-close="handleClose">
       <span :key="formKey">
         <myForm/>
       </span>
@@ -20,31 +20,32 @@
 
 <script>
 // import myTable from './myTable'
-import myForm from "./components/myForm";
-  export default {
-    name: "index",
-    components: {
-      // myTable,
-      myForm
-    },
-    data () {
-      return {
-        tableKey: 0,
-        formKey: 0,
-        dialogVisible: false,
-      }
-    },
-    methods: {
-      handleClose () {
-        this.dialogVisible = false;
-        this.formKey ++;
-      },
+import myForm from './components/myForm'
 
-      onSubmit () {
-        this.dialogVisible = true;
-      },
+export default {
+  name: 'index',
+  components: {
+    // myTable,
+    myForm
+  },
+  data() {
+    return {
+      tableKey: 0,
+      formKey: 0,
+      dialogVisible: false
+    }
+  },
+  methods: {
+    handleClose() {
+      this.dialogVisible = false
+      this.formKey++
+    },
+
+    onSubmit() {
+      this.dialogVisible = true
     }
   }
+}
 </script>
 
 <style scoped>
