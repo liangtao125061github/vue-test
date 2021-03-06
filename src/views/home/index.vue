@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <el-button type="primary" @click="onSubmit">显示弹框</el-button>
-    <!--    <myTable :key="tableKey"/>-->
+<!--    <el-button type="primary" @click="onSubmit">显示弹框</el-button>-->
+    <myTable :key="tableKey"/>
     <el-dialog
         title="提示"
         :visible.sync="dialogVisible"
@@ -19,13 +19,13 @@
 </template>
 
 <script>
-// import myTable from './myTable'
+import myTable from './components/myTable'
 import myForm from './components/myForm'
 
 export default {
   name: 'index',
   components: {
-    // myTable,
+    myTable,
     myForm
   },
   data() {

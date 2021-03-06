@@ -8,7 +8,7 @@
       <el-aside style="width: 200px;">
         <el-menu :default-openeds="['1', '3']">
           <el-submenu index="1">
-            <template slot="title"><i class="el-icon-setting"></i>导航一</template>
+            <template slot="title"><i class="el-icon-setting"></i>导航</template>
             <el-menu-item-group>
               <template v-for="(item, index) in routers">
                 <router-link :key="item.name" v-if="item.path != '/'" :to="item.path">

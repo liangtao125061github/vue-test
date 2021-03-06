@@ -11,6 +11,17 @@ module.exports = {
         port: 8080,
         https: false,
         hotOnly: false,
-        proxy: null, // 设置代理
+        proxy: {
+            '/form/': {
+                target: 'www.baidu.com',
+                changeOrigin: true,
+                ws: false
+            },
+            '/': {
+                target: 'http://81.70.29.145:3000/mock/29',
+                changeOrigin: true,
+                ws: false
+            },
+        }
     }
 }
