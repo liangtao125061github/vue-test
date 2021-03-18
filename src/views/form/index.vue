@@ -4,7 +4,13 @@
       <el-input v-model="sizeForm.name"></el-input>
     </el-form-item>
     <el-form-item label="活动区域">
-      <el-input v-model="sizeForm.region"></el-input>
+      <el-select v-model="region" @change="changeValue" placeholder="请选择活动区域">
+        <el-option v-for="(item, index) in options"
+                   :key="index"
+                   :label="item.label"
+                   :value="item.label">
+        </el-option>
+      </el-select>
     </el-form-item>
     <el-form-item label="活动时间">
       <el-input v-model="sizeForm.date1"></el-input>
@@ -28,9 +34,16 @@
 
     data () {
       return {
+        options: [{
+          label: '111',
+          value: '我的1'
+        },{
+          label: '222',
+          value: '我的2'
+        }],
+        region: '',
         sizeForm: {
           name: '',
-          region: '',
           date1: '',
           province: '',
           city: '',
@@ -48,7 +61,7 @@
       },
 
       onSubmit() {
-        console.log('submit!');
+
       }
     },
 

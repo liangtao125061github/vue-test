@@ -8,7 +8,7 @@
 import index from './views/index.vue'
 
 export default {
-  name: 'app',
+  name: 'app',/*  */
   components: {
     index
   }

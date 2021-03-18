@@ -1,5 +1,6 @@
 import Home from './views/home'
 import Form from './views/form'
+import aForm from './views/aForm'
 
 const routers = [
   {
@@ -15,6 +16,11 @@ const routers = [
     path: '/form',
     name: '表单',
     component: Form
+  },
+  {
+    path: '/aForm',
+    name: 'antd表单',
+    component: aForm
   }
 ]
 

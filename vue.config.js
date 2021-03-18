@@ -8,15 +8,10 @@ module.exports = {
     // webpack-dev-server 相关配置
     devServer: {
         host: '0.0.0.0',
-        port: 8080,
+        port: 9090,
         https: false,
         hotOnly: false,
         proxy: {
-            '/form/': {
-                target: 'www.baidu.com',
-                changeOrigin: true,
-                ws: false
-            },
             '/': {
                 target: 'http://81.70.29.145:3000/mock/29',
                 changeOrigin: true,
