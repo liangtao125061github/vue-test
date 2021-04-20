@@ -4,7 +4,7 @@
       <el-input v-model="sizeForm.name"></el-input>
     </el-form-item>
     <el-form-item label="活动区域">
-      <el-select v-model="region" @change="changeValue" placeholder="请选择活动区域">
+      <el-select v-model="region" placeholder="请选择活动区域">
         <el-option v-for="(item, index) in options"
                    :key="index"
                    :label="item.label"
@@ -52,22 +52,21 @@
         }
       }
     },
-
+    created() {
+      console.log('created', 'form')
+    },
+    activated() {
+      console.log('activated', 'form')
+    },
     methods: {
       initFormList () {
-        this.$http.post('/form/list').then(({data}) => {
-          this.sizeForm = data.data
-        });
+
       },
 
       onSubmit() {
 
       }
     },
-
-    created() {
-      this.initFormList()
-    }
   }
 </script>
 

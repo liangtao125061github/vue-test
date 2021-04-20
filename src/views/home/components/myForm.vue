@@ -50,7 +50,7 @@
 
 <script>
 export default {
-  name: "table",
+  name: "myForm",
 
   data () {
     return {

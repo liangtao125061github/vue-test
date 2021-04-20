@@ -67,11 +67,11 @@ export default {
 
   methods: {
     initTableList () {
-      this.$http.get('/tableList').then(({data}) => {
-        this.tableData = data.data.dataList;
-        this.tableData.map(item => item.num = 1)
-        // console.log('this.tableData', this.tableData)
-      });
+      // this.$http.get('/tableList').then(({data}) => {
+      //   this.tableData = data.data.dataList;
+      //   this.tableData.map(item => item.num = 1)
+      //   // console.log('this.tableData', this.tableData)
+      // });
     },
 
     changeValue (e) {

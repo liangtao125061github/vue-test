@@ -35,6 +35,12 @@ export default {
       dialogVisible: false
     }
   },
+  created() {
+    console.log('created', 'home')
+  },
+  activated() {
+    console.log('activated', 'home')
+  },
   methods: {
     handleClose() {
       this.dialogVisible = false
